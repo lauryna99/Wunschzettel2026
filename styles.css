@@ -370,8 +370,7 @@ button {
   font-size: 10px;
 }
 
-.footer span:first-child,
-.footer span:last-child {
+.footer span[aria-hidden="true"] {
   color: #b79b64;
   font-size: 11px;
 }
