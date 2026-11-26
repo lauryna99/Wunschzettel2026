@@ -1,7 +1,12 @@
 const WISHES = [
-  // Add wishes here; url is optional.
-  // { name: "Ein kuscheliger Schal", url: "https://example.com" },
-  // { name: "Ein Buch" },
+  {
+    name: "Sportleggings Adidas Own the Run Größe M schwarz",
+    url: "https://www.intersport.de/p/adidas-damen-tights-own-the-run-full-length-p1149174?articleId=a102106934",
+  },
+  {
+    name: "Windweste Rennrad Größe S",
+    url: "https://straede.cc/products/fahrradweste-damen-vest-women?variant=45516477628683",
+  },
 ];
 
 const wishList = document.querySelector("#wish-list");

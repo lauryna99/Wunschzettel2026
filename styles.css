@@ -370,7 +370,7 @@ button {
   font-size: 10px;
 }
 
-.footer span:last-child {
+.footer span:first-child {
   color: #b79b64;
   font-size: 11px;
 }
@@ -409,10 +409,11 @@ button {
 
   .topbar {
     height: 67px;
+    justify-content: center;
   }
 
   .brand {
-    font-size: 13px;
+    display: none;
   }
 
   .season-note {
