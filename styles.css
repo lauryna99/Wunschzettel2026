@@ -370,7 +370,8 @@ button {
   font-size: 10px;
 }
 
-.footer span:first-child {
+.footer span:first-child,
+.footer span:last-child {
   color: #b79b64;
   font-size: 11px;
 }
@@ -488,14 +489,8 @@ button {
 }
 
 @media print {
-  @page {
-    margin: 14mm;
-  }
-
   body {
-    background: var(--paper);
-    print-color-adjust: exact;
-    -webkit-print-color-adjust: exact;
+    background: white;
   }
 
   .page-shell {
@@ -503,49 +498,15 @@ button {
   }
 
   .topbar,
+  .intro,
   .print-button,
+  .footer,
   .empty-state {
     display: none !important;
   }
 
-  .intro {
-    min-height: 235px;
-    margin: 0 0 28px;
-    padding: 30px 34px;
-    border-radius: 12px;
-    print-color-adjust: exact;
-    -webkit-print-color-adjust: exact;
-  }
-
-  .intro-copy {
-    width: 58%;
-  }
-
-  .intro h1 {
-    font-size: 34px;
-  }
-
-  .intro-text {
-    font-size: 11px;
-  }
-
-  .holiday-art {
-    width: 45%;
-  }
-
-  .tree-photo {
-    -webkit-mask-image: linear-gradient(to right, transparent, #000 14%);
-    mask-image: linear-gradient(to right, transparent, #000 14%);
-  }
-
   .wishlist-layout {
     display: block;
-    max-width: 100%;
-    margin: 0;
-  }
-
-  .section-heading {
-    margin-bottom: 16px;
   }
 
   .section-heading h2 {
@@ -554,21 +515,8 @@ button {
 
   .wish-card {
     break-inside: avoid;
-    padding: 14px 15px;
-    border-color: #dcd9cf;
-    background: var(--card);
+    border-color: #ddd;
     box-shadow: none;
-  }
-
-  .wish-title {
-    overflow: visible;
-    white-space: normal;
-  }
-
-  .footer {
-    display: flex;
-    margin: 32px 0 0;
-    color: #78827a;
   }
 }
 
