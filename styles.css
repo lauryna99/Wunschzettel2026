@@ -488,8 +488,14 @@ button {
 }
 
 @media print {
+  @page {
+    margin: 14mm;
+  }
+
   body {
-    background: white;
+    background: var(--paper);
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
   }
 
   .page-shell {
@@ -497,15 +503,49 @@ button {
   }
 
   .topbar,
-  .intro,
   .print-button,
-  .footer,
   .empty-state {
     display: none !important;
   }
 
+  .intro {
+    min-height: 235px;
+    margin: 0 0 28px;
+    padding: 30px 34px;
+    border-radius: 12px;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  .intro-copy {
+    width: 58%;
+  }
+
+  .intro h1 {
+    font-size: 34px;
+  }
+
+  .intro-text {
+    font-size: 11px;
+  }
+
+  .holiday-art {
+    width: 45%;
+  }
+
+  .tree-photo {
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 14%);
+    mask-image: linear-gradient(to right, transparent, #000 14%);
+  }
+
   .wishlist-layout {
     display: block;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .section-heading {
+    margin-bottom: 16px;
   }
 
   .section-heading h2 {
@@ -514,8 +554,21 @@ button {
 
   .wish-card {
     break-inside: avoid;
-    border-color: #ddd;
+    padding: 14px 15px;
+    border-color: #dcd9cf;
+    background: var(--card);
     box-shadow: none;
+  }
+
+  .wish-title {
+    overflow: visible;
+    white-space: normal;
+  }
+
+  .footer {
+    display: flex;
+    margin: 32px 0 0;
+    color: #78827a;
   }
 }
 
