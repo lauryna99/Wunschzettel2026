@@ -1,10 +1,12 @@
 const WISHES = [
   {
-    name: "Sportleggings Adidas Own the Run Größe M schwarz",
+    name: "Sportleggings",
+    description: "Adidas Own the Run · Größe M · schwarz",
     url: "https://www.intersport.de/p/adidas-damen-tights-own-the-run-full-length-p1149174?articleId=a102106934",
   },
   {
-    name: "Windweste Rennrad Größe S",
+    name: "Windweste Rennrad",
+    description: "straede vest women · Größe S · cloud grey",
     url: "https://straede.cc/products/fahrradweste-damen-vest-women?variant=45516477628683",
   },
 ];
@@ -58,7 +60,10 @@ function renderWishes() {
     const title = document.createElement("h3");
     title.className = "wish-title";
     title.textContent = wish.name;
-    details.append(title);
+    const description = document.createElement("p");
+    description.className = "wish-subtitle";
+    description.textContent = wish.description;
+    details.append(title, description);
 
     const actions = document.createElement("div");
     actions.className = "wish-actions";
